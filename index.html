@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Responsive Timeline Demo</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<!-- Header -->
+		<header class="header container">
+			<div class="header-left">
+				<div class="brand">
+					<span class="title">Project Timeline</span>
+					<span class="subtitle">Milestones & Events</span>
+				</div>
+			</div>
+			<div class="header-actions">
+				<button class="btn ghost" onclick="openModal()">Info</button>
+				<button class="btn primary">Add Event</button>
+			</div>
+		</header>
+
+		<!-- Timeline -->
+		<main class="container timeline-wrap">
+			<section class="timeline">
+				<div class="timeline-list">
+					<!-- Event 1 -->
+					<div class="timeline-item">
+						<div class="event-head">
+							<h3 class="event-title">Kickoff Meeting</h3>
+							<span class="event-time">Jan 10, 2025</span>
+						</div>
+						<span class="event-label">Completed</span>
+						<div class="event-body">
+							Initial discussion of project scope, deliverables, and deadlines.
+						</div>
+					</div>
+
+					<!-- Event 2 -->
+					<div class="timeline-item">
+						<div class="event-head">
+							<h3 class="event-title">Design Phase</h3>
+							<span class="event-time">Feb 2–14, 2025</span>
+						</div>
+						<span class="event-label">In Progress</span>
+						<div class="event-body">
+							Creating wireframes, mockups, and architecture diagrams.
+						</div>
+					</div>
+
+					<!-- Event 3 -->
+					<div class="timeline-item">
+						<div class="event-head">
+							<h3 class="event-title">Prototype Release</h3>
+							<span class="event-time">Mar 5, 2025</span>
+						</div>
+						<span class="event-label">Pending</span>
+						<div class="event-body">
+							First working version to be shared with stakeholders for feedback.
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- Modal -->
+		<div class="modal-backdrop" id="infoModal">
+			<div class="modal">
+				<div class="modal-head">
+					<h2 class="modal-title">About This Timeline</h2>
+					<button class="modal-close" onclick="closeModal()">✕</button>
+				</div>
+				<div class="separator"></div>
+				<div class="modal-body">
+					This timeline shows key events for the current project. You can click
+					on events (future feature) to view more details, edit dates, or update
+					status.
+				</div>
+				<div class="modal-foot">
+					<button class="btn ghost" onclick="closeModal()">Close</button>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			function openModal() {
+				document.getElementById('infoModal').classList.add('active');
+			}
+			function closeModal() {
+				document.getElementById('infoModal').classList.remove('active');
+			}
+		</script>
+	</body>
+</html>
